@@ -1,0 +1,145 @@
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button icon-only menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
+    <ion-title>
+      {{'Post Listing'| translate }}
+    </ion-title>
+
+    <ion-buttons end>
+      <button ion-button icon-only (tap)="openSearch()">
+        <ion-icon name="search"></ion-icon>
+      </button>
+      <button ion-button icon-only class="cart-button" (tap)="openCart()">
+        <ion-icon name="cart">
+          <ion-badge color="secondary">0</ion-badge>
+        </ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+<ion-content>
+  <!--  <div class="header">
+    <button ion-button clear class="cancel-btn">Cancel</button>
+    <p class="title">Add Listing</p>
+    <button ion-button clear class="done-btn">Done</button>
+  </div> -->
+  <ion-stepper #stepper (selectIndexChange)="selectChange($event)" mode='horizontal'>
+    <ion-step label="General" description="General information">
+      <div class="img-selector">
+        <button ion-button round icon-only (click)="openActionSheet()">
+          <ion-icon name="camera" color="light"></ion-icon>
+        </button>
+        <p>Cover Photo</p>
+      </div>
+      <div class="info-container">
+        <ion-item no-lines class="info-row select">
+          <ion-label>Category</ion-label>
+          <ion-select [(ngModel)]="listing.category">
+            <ion-option value="1">Men's Clothing</ion-option>
+            <ion-option value="2">Women's Clothing</ion-option>
+            <ion-option value="3">Boy's Clothing</ion-option>
+            <ion-option value="4">Girl's Clothing</ion-option>
+            <ion-option value="5">Baby and Mother</ion-option>
+            <ion-option value="6">Household</ion-option>
+          </ion-select>
+        </ion-item>
+        <div class="info-row">
+          <input placeholder="Title" [(ngModel)]="listing.title"/>
+        </div>
+        <div class="info-row">
+          <input placeholder="Description" [(ngModel)]="listing.description"/>
+        </div>
+        <ion-item no-lines class="info-row select">
+          <ion-label>Condition</ion-label>
+          <ion-select [(ngModel)]="listing.condition">
+            <ion-option value="new">New</ion-option>
+            <ion-option value="used">Used</ion-option>
+          </ion-select>
+        </ion-item>
+        <div class="info-row">
+          <p>Price</p>
+          <input placeholder="$0.00" style="margin-left: 20px" [(ngModel)]="listing.price"/>
+        </div>
+      </div>
+      <p class="section">Flaws</p>
+      <div class="info-container">
+        <div class="info-row" *ngFor="let item of arrFlaws, let idx = index">
+          <p>{{item.type}}</p>
+          <p>{{item.position}}</p>
+          <ion-icon name="remove-circle" (click)="removeFlaw(idx)"></ion-icon>
+        </div>
+        <div class="info-row add" (click)="addFlaw()">
+          <ion-icon name="add-circle"></ion-icon>
+          <p>Add a flaw</p>
+        </div>
+      </div>
+      <div class="buttons">
+        <button ion-button ionicStepperNext>Next</button>
+      </div>
+
+    </ion-step>
+    <ion-step label="Images">
+      <div class="buttons">
+        <button ion-button (click)="openActionSheet()">Add product image</button>
+      </div>
+      <ion-grid>
+        <ion-row>
+          <ion-col col-4 *ngFor="let image of arrImages">
+            <img [src]="image" />
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <div class="buttons">
+        <button ion-button ionicStepperPrevious>Previous</button>
+        <button ion-button ionicStepperNext>Next</button>
+      </div>
+    </ion-step>
+    <ion-step label="Additional">
+      <p class="section">SHIPPING</p>
+      <div class="info-container">
+        <ion-item no-lines class="info-row select">
+          <ion-label>Shipping</ion-label>
+          <ion-select [(ngModel)]="listing.shipping">
+            <ion-option value="upsShipping">UPS Shippng</ion-option>
+            <ion-option value="freeShiping">Free Shipping</ion-option>
+            <ion-option value="localPickup">Local Pickup</ion-option>
+            <ion-option value="flateRate">Flate Rate</ion-option>
+            <ion-option value="shippingByWeight">Shipping By Weight</ion-option>
+          </ion-select>
+        </ion-item>
+      </div>
+      <p class="section">Additional Details</p>
+      <div class="info-container">
+        <ion-item no-lines class="info-row select">
+          <ion-label>Accept offers?</ion-label>
+          <ion-radio [checked]="listing.acceptOffer" (click)="listing.acceptOffer = !listing.acceptOffer"></ion-radio>
+        </ion-item>
+        <ion-item no-lines class="info-row select">
+          <ion-label>Auto Relisting?</ion-label>
+          <ion-radio [checked]="listing.autorelisting" (click)="listing.autorelisting = !listing.autorelisting"></ion-radio>
+        </ion-item>
+        <ion-item no-lines class="info-row select">
+          <ion-label>Listing Date:</ion-label>
+          <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="listing.listingDate"></ion-datetime>
+        </ion-item>
+        <ion-item no-lines class="info-row select">
+          <ion-label>Auction Style</ion-label>
+          <ion-select [(ngModel)]="listing.auctionStyle">
+            <ion-option value="fixed_listing">Fixed Listing</ion-option>
+            <ion-option value="raffle">Raffle</ion-option>
+          </ion-select>
+        </ion-item>
+        <textarea placeholder="Please insert additional details" [(ngModel)]="listing.additionalDesc"></textarea>
+      </div>
+      <div class="buttons">
+        <button ion-button ionicStepperPrevious>Previous</button>
+        <button ion-button (click)="onSave()">Save</button>
+      </div>
+    </ion-step>
+  </ion-stepper>
+</ion-content>

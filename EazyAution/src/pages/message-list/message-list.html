@@ -1,0 +1,31 @@
+<!--
+  Generated template for the MessageListPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title text-center>Messages</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="message-item" *ngFor = "let item of arrRooms" (click)="gotoChat()">
+    <div class="avatar-container">
+      <img [src]="item.avatar"/>
+      <span class="online-mark" *ngIf="item.isOnline"></span>
+    </div>    
+    <div class="body">
+      <div>
+        <p class="name" [ngClass]="{'new': item.badge > 0}">{{item.name}}</p>
+        <span class="badge" *ngIf="item.badge > 0">{{item.badge}}</span>
+      </div>
+      <div>
+        <p class="message">{{item.message}}</p>
+        <p class="time">{{item.datetime}}</p>
+      </div>
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,185 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Inactive</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content padding>
+    <ion-item class="card animated fadeIn">
+        <ion-thumbnail item-start>
+            <div class="list-tag-new" translate></div>
+            <img class="image" src="assets/avatar.png" />
+  </ion-thumbnail>
+            <div class="line-clamp">Product Name</div>
+            <div class="list-price-block">
+            </div>
+            <ion-row align-items-center>
+                <ion-col col-10>
+                    <span>
+         <h4 class="list-price-normal"><span class="list-price-normal-through" >$12.99</span>
+                    <p>Stella McCartney</p>
+                    </h4>
+                    </span>
+                </ion-col>
+                <ion-col col-2>
+                    <ion-icon class="fa-rotate-90" ios="ios-more" md="md-more"></ion-icon>
+                </ion-col>
+            </ion-row>
+    </ion-item>
+    <ion-item class="card animated fadeIn">
+        <ion-thumbnail item-start>
+            <div class="list-tag-new" translate></div>
+            <img class="image" src="assets/avatar.png" />
+  </ion-thumbnail>
+            <div class="line-clamp">Product Name</div>
+            <div class="list-price-block">
+            </div>
+            <ion-row align-items-center>
+                <ion-col col-10>
+                    <span>
+         <h4 class="list-price-normal"><span class="list-price-normal-through" >$12.99</span>
+                    <p>Stella McCartney</p>
+                    </h4>
+                    </span>
+                </ion-col>
+                <ion-col col-2>
+                    <ion-icon class="fa-rotate-90" ios="ios-more" md="md-more"></ion-icon>
+                </ion-col>
+            </ion-row>
+    </ion-item>
+    <ion-item class="card animated fadeIn">
+        <ion-thumbnail item-start>
+            <div class="list-tag-new" translate></div>
+            <img class="image" src="assets/avatar.png" />
+  </ion-thumbnail>
+            <div class="line-clamp">Product Name</div>
+            <div class="list-price-block">
+            </div>
+            <ion-row align-items-center>
+                <ion-col col-10>
+                    <span>
+         <h4 class="list-price-normal"><span class="list-price-normal-through" >$12.99</span>
+                    <p>Stella McCartney</p>
+                    </h4>
+                    </span>
+                </ion-col>
+                <ion-col col-2>
+                    <ion-icon class="fa-rotate-90" ios="ios-more" md="md-more"></ion-icon>
+                </ion-col>
+            </ion-row>
+    </ion-item>
+    <ion-item class="card animated fadeIn">
+        <ion-thumbnail item-start>
+            <div class="list-tag-new" translate></div>
+            <img class="image" src="assets/avatar.png" />
+  </ion-thumbnail>
+            <div class="line-clamp">Product Name</div>
+            <div class="list-price-block">
+            </div>
+            <ion-row align-items-center>
+                <ion-col col-10>
+                    <span>
+         <h4 class="list-price-normal"><span class="list-price-normal-through" >$12.99</span>
+                    <p>Stella McCartney</p>
+                    </h4>
+                    </span>
+                </ion-col>
+                <ion-col col-2>
+                    <ion-icon class="fa-rotate-90" ios="ios-more" md="md-more"></ion-icon>
+                </ion-col>
+            </ion-row>
+    </ion-item>
+    <ion-item class="card animated fadeIn">
+        <ion-thumbnail item-start>
+            <div class="list-tag-new" translate></div>
+            <img class="image" src="assets/avatar.png" />
+  </ion-thumbnail>
+            <div class="line-clamp">Product Name</div>
+            <div class="list-price-block">
+            </div>
+            <ion-row align-items-center>
+                <ion-col col-10>
+                    <span>
+         <h4 class="list-price-normal"><span class="list-price-normal-through" >$12.99</span>
+                    <p>Stella McCartney</p>
+                    </h4>
+                    </span>
+                </ion-col>
+                <ion-col col-2>
+                    <ion-icon class="fa-rotate-90" ios="ios-more" md="md-more"></ion-icon>
+                </ion-col>
+            </ion-row>
+    </ion-item>
+</ion-content>
+<ion-footer>
+  <ion-toolbar color="light">
+    <ion-buttons left>
+      <small>{{"Sort by"|translate}}</small>
+      <button small ion-button clear color="secondary" (click)="openSortBy()">
+        {{sortOrder| translate}}
+        <ion-icon name="arrow-up"></ion-icon>
+      </button>
+    </ion-buttons>
+
+    <ion-buttons right>
+      <button ion-button icon-only (click)="removeFilters()" *ngIf="applyFilter==true">
+        <ion-icon name="refresh"></ion-icon>
+      </button>
+      <button ion-button icon-only *ngIf="shared.dir=='ltr'" menuToggle="right">
+        <ion-icon name="funnel"></ion-icon>
+      </button>
+      <button ion-button icon-only *ngIf="shared.dir=='rtl'" menuToggle="left">
+        <ion-icon name="funnel"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>
+<ion-menu [content]="content" side="{{side}}" id="menu2">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons left>
+        <button ion-button icon-only *ngIf="shared.dir=='ltr'" menuToggle="right">
+          <ion-icon name="close"></ion-icon>
+        </button>
+        <button ion-button icon-only *ngIf="shared.dir=='rtl'" menuToggle="left">
+          <ion-icon name="close"></ion-icon>
+        </button>
+      </ion-buttons>
+      <ion-title>{{"Filters"|translate}}</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="side-menu">
+    <h3>{{'Price Range'| translate}}</h3>
+    <ion-item dir="ltr">
+      <ion-range dualKnobs="true" pin="true" snaps="true" [(ngModel)]="price" [min]="0" [max]="maxAmount">
+        <ion-label range-left>{{price.lower}}</ion-label>
+        <ion-label range-right>{{price.upper}}</ion-label>
+      </ion-range>
+    </ion-item>
+
+    <div *ngIf="filters.length>0">
+      <ion-list *ngFor="let filter of filters">
+        <h3>{{filter.option.name}}</h3>
+        <ion-item *ngFor="let options of filter.values">
+          <ion-label>{{options.value}}</ion-label>
+          <ion-checkbox (ionChange)="fillFilterArray($event,filter.option.name,options.value)"></ion-checkbox>
+        </ion-item>
+      </ion-list>
+    </div>
+  </ion-content>
+  <ion-footer>
+    <ion-toolbar color="light">
+      <ion-buttons left>
+        <button ion-button outline color="secondary" menuClose="right" (click)="resetFilters()">
+          {{'Reset'| translate}}
+        </button>
+      </ion-buttons>
+      <ion-title></ion-title>
+      <ion-buttons right>
+        <button ion-button solid color="secondary" menuClose="right" (click)="applyFilters()">
+          {{'Apply'| translate}}
+        </button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-footer>
+</ion-menu>
+<ion-nav #content></ion-nav>

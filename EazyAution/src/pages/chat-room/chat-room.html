@@ -1,0 +1,43 @@
+<ion-header no-border>
+  <div class="header-content">
+    <button class="back-btn" ion-button clear icon-only item-right (click)="back()">
+      <ion-icon name="ios-arrow-back"></ion-icon>
+    </button>
+    <img src="assets/300.jpeg"/>
+    <div>
+      <p class="name">Melvin Burgess</p>
+      <p class="status">online</p>
+    </div>
+    <button class="option-btn" ion-button clear icon-only item-right (click)="showOptions()">
+        <ion-icon name="md-more"></ion-icon>
+      </button>
+  </div>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list #chatList>
+    <div class="chat-item" *ngFor="let item of arrChats" [ngClass]="{'left': item.senderId !== 0, 'right':item.senderId === 0}">
+      <div class="message">
+        {{item.message}}
+      </div>
+      <div class="bottom">
+        <p class="time">{{item.time}}</p>
+        <ion-icon name="done-all" *ngIf="item.senderId == 0"></ion-icon>
+      </div>
+    </div>
+  </ion-list>
+</ion-content>
+
+<ion-footer no-border>
+  <div class="input-wrap">
+    <button class="attach-btn" ion-button clear icon-only item-right (click)="openActionSheet()">
+      <ion-icon name="md-add"></ion-icon>
+    </button>
+    <textarea #chat_input placeholder="Text Input" [(ngModel)]="editorMsg">
+      </textarea>
+    <button class="send-btn" ion-button round icon-only item-right (click)="sendMsg()">
+      <ion-icon name="ios-send" ios="ios-send" md="md-send"></ion-icon>
+    </button>
+  </div>
+</ion-footer>

@@ -1,0 +1,114 @@
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button icon-only menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
+    <ion-title>
+      {{'Seller Home'| translate }}
+    </ion-title>
+
+    <ion-buttons end>
+      <button ion-button icon-only (tap)="openSearch()">
+        <ion-icon name="search"></ion-icon>
+      </button>
+      <button ion-button icon-only class="cart-button" (tap)="openCart()">
+        <ion-icon name="cart">
+          <ion-badge color="secondary">{{shared.cartquantity}}</ion-badge>
+        </ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+<ion-content>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col col-6 class="animated flipInX">
+        <ion-card >
+          <div class="categories-title">
+            <h2>Live Listings
+              <br>
+             <small>24</small>
+            </h2>
+          </div>
+        </ion-card>
+      </ion-col>
+      <ion-col col-6 class="animated flipInX">
+        <ion-card >
+          <div class="categories-title">
+            <h2>Drafts
+              <br>
+              <small>24</small>
+            </h2>
+          </div>
+        </ion-card>
+      </ion-col>
+      <ion-col col-6 class="animated flipInX">
+        <ion-card >
+          <div class="categories-title">
+            <h2>Sold
+              <br>
+             <small>24</small>
+            </h2>
+          </div>
+        </ion-card>
+      </ion-col>
+      <ion-col col-6 class="animated flipInX">
+        <ion-card >
+          <div class="categories-title">
+            <h2>Shipping
+              <br>
+              <small>24</small>
+            </h2>
+          </div>
+        </ion-card>
+      </ion-col>
+      <ion-col col-6 class="animated flipInX">
+        <ion-card >
+          <div class="categories-title">
+            <h2>Offers
+              <br>
+             <small>24</small>
+            </h2>
+          </div>
+        </ion-card>
+      </ion-col>
+      <ion-col col-6 class="animated flipInX">
+        <ion-card >
+          <div class="categories-title">
+            <h2>Investigations
+              <br>
+              <small>24</small>
+            </h2>
+          </div>
+        </ion-card>
+      </ion-col>
+      <ion-col col-6 class="animated flipInX">
+        <ion-card >
+          <div class="categories-title">
+            <h2>Reviews
+              <br>
+             <small>24</small> 
+            </h2>
+          </div>
+        </ion-card>
+      </ion-col>
+      <ion-col col-6 class="animated flipInX">
+        <ion-card >
+          <div class="categories-title">
+            <h2>Returns
+              <br>
+             <small>24</small>
+            </h2>
+          </div>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+<ion-footer *ngIf="config.footerShowHide=='1'">
+  <footer></footer>
+</ion-footer>

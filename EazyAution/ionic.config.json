@@ -1,0 +1,7 @@
+{
+  "name": "EazyAuctions",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

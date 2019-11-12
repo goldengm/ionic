@@ -1,0 +1,117 @@
+page-chat-room {
+    .content {
+        background: #FBFCFE;
+    }
+    .header-content {
+        display: flex;
+        flex-direction: row;
+        padding: 10px 0px;
+        background: white;
+        & > img {
+            width: 40px;
+            height: 40px;
+            border-radius: 20px;
+            margin-left: 5px;
+        }
+
+        & > div {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            margin-left: 5px;
+            & > p {
+                margin: 0px;
+                &.name {
+                    font-size: 1.2em;
+                    color: #464C62;
+                }
+
+                &.status {
+                    font-size: 0.8em;
+                    color: #51688F;
+                }
+            }
+        }
+    }
+    .input-wrap {
+        padding: 5px 0px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        background: #EBECF0;
+
+        & > textarea {
+            flex: 1;
+            padding: 10px;
+            height: 40px;
+            border: solid 1px lightgray;
+            border-radius: 25px;
+        }
+
+        & > .send-btn {
+            margin-left: 5px;
+            background: #51688F;
+            width: 40px;
+            height: 40px;
+        }
+
+        & > .attach-btn {
+            width: 40px;
+            height: 40px;
+            margin-right: 5px;
+        }
+    }
+
+    .chat-item {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+        & > .message {
+            max-width: 90%;
+            border-radius: 10px;
+            padding: 10px;
+        }
+
+        & > .bottom {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin: 5px 10px;
+            & > p {
+                margin: 0px;
+                font-size: 0.8em;
+                color: #B5B6BF
+            }
+
+            & > ion-icon {
+                margin-left: 10px;
+                color: #51688F;
+            }
+        }
+        &.left {
+            align-items: flex-start;
+            & > .message {
+                background: #EEEFF3;
+                color: #565D71
+            }
+
+            & > .bottom {
+                justify-content: flex-start
+            }
+        }
+
+        &.right {
+            align-items: flex-end;
+            & > .message {
+                background: #51688F;
+                color: white
+            }
+
+            & > .bottom {
+                justify-content: flex-end
+            }
+        }
+
+
+    }
+}

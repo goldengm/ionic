@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Payments</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <!-- <p>NOTE: THIS ONLY WORKS ON MOBILE!</p> -->
+  <div>
+    <img [src]="cardImage" />
+    <ion-fab right class="pop-in" vertical="top" horizontal="end" slot="fixed" [ngClass]="{'pop-out': fabGone}" style="top: 5rem;">
+      <button ion-fab mini (click)="scanCard()" color="dark"><ion-icon name="camera"></ion-icon></button>
+    </ion-fab>
+  </div>
+  <div>
+  	<ion-toolbar class="toolbar-secondary" padding>
+    <ion-slides slidesPerView="auto">
+      <ion-slide [class.selected]="selectedTab==''" (click)="changeTab('')">{{'Visa'|translate}}</ion-slide>
+      <ion-slide (click)="changeTab(c)">
+        Mastercard
+      </ion-slide>
+      <ion-slide (click)="changeTab(c)">
+       American Express
+      </ion-slide>
+      <ion-slide (click)="changeTab(c)">
+        Discover
+      </ion-slide>
+    </ion-slides>
+  </ion-toolbar>
+    <ion-item padding>
+      <ion-label>Card Type</ion-label>
+      <ion-input type="text" [(ngModel)]="card.cardType"></ion-input>
+    </ion-item>
+    <ion-item padding>
+      <ion-label>Card Number</ion-label>
+      <ion-input type="text" [(ngModel)]="card.cardNumber"></ion-input>
+    </ion-item>
+    <ion-item padding>
+      <ion-label>Expiry Month</ion-label>
+      <ion-input type="text" [(ngModel)]="card.expiryMonth"></ion-input>
+    </ion-item>
+    <ion-item padding>
+      <ion-label>Expiry Year</ion-label>
+      <ion-input type="text" [(ngModel)]="card.expiryYear"></ion-input>
+    </ion-item>
+    <ion-item padding>
+      <ion-label>CVV</ion-label>
+      <ion-input type="text" [(ngModel)]="card.cvv"></ion-input>
+    </ion-item>
+  </div>
+</ion-content>
+<ion-footer>
+ <ion-row>
+    <ion-col col-12>
+      <button ion-button block medium>{{ 'Store Payment' | translate }}</button>
+    </ion-col>
+  </ion-row>
+</ion-footer>
+

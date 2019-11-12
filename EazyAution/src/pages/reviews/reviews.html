@@ -1,0 +1,212 @@
+<ion-header>
+	<ion-navbar>
+		<ion-title>Review Details</ion-title>
+	</ion-navbar>
+</ion-header>
+<ion-content padding-top>
+	<ion-list>
+		<ion-item>
+			<h2>Overall Rating</h2>
+			<button ion-button clear item-end (click)="openPage('addreview')">Write a review &nbsp;
+				<ion-icon name="arrow-forward"></ion-icon>
+			</button>
+		</ion-item>
+	</ion-list>
+	<ion-row padding-left padding-right padding-bottom>
+		<ion-col text-left>
+			<div class="rev-total"> A</div>
+			<div class="rev-total-sub">300 REVIEWS</div>
+		</ion-col>
+		<ion-col>
+			<div class="star-sm">
+				A
+				<!-- <div class="rating-line rating-line-ten"></div> -->
+				<!-- <ion-icon ios="ios-star" md="md-star"></ion-icon>
+				<ion-icon ios="ios-star" md="md-star"></ion-icon>
+				<ion-icon ios="ios-star" md="md-star"></ion-icon>
+				<ion-icon ios="ios-star" md="md-star"></ion-icon>
+				<ion-icon ios="ios-star" md="md-star"></ion-icon> -->
+			</div>
+			<div class="star-sm">
+				B
+				<!-- <div class="rating-line rating-line-two"></div> -->
+				<!-- <ion-icon ios="ios-star" md="md-star"></ion-icon>
+				<ion-icon ios="ios-star" md="md-star"></ion-icon>
+				<ion-icon ios="ios-star" md="md-star"></ion-icon>
+				<ion-icon ios="ios-star" md="md-star"></ion-icon> -->
+			</div>
+			<div class="star-sm">
+				C
+				<!-- <div class="rating-line rating-line-two"></div> -->
+				<!-- <ion-icon ios="ios-star" md="md-star"></ion-icon>
+				<ion-icon ios="ios-star" md="md-star"></ion-icon>
+				<ion-icon ios="ios-star" md="md-star"></ion-icon> -->
+			</div>
+			<div class="star-sm">
+				D
+				<!-- <div class="rating-line rating-line-two"></div> -->
+				<!-- <ion-icon ios="ios-star" md="md-star"></ion-icon>
+				<ion-icon ios="ios-star" md="md-star"></ion-icon> -->
+			</div>
+			<div class="star-sm">
+				F
+				<!-- <div class="rating-line"></div> -->
+				<!-- <ion-icon ios="ios-star" md="md-star"></ion-icon> -->
+			</div>
+		</ion-col>
+		<ion-col>
+			<div class="rating-line rating-line-ten"></div>
+			<div class="rating-line  rating-line-eight"></div>
+			<div class="rating-line rating-line-six"></div>
+			<div class="rating-line rating-line-two"></div>
+			<div class="rating-line rating-line-one"></div>
+		</ion-col>
+	</ion-row>
+	<ion-list>
+		<ion-item>
+			<h2>Categories</h2>
+			<!-- <button ion-button clear item-end (tap)="writeReviewPage()">Write a review &nbsp;
+				<ion-icon name="arrow-forward"></ion-icon>
+			</button> -->
+		</ion-item>
+	</ion-list>
+<ion-row padding-left padding-right padding-bottom>
+	<ion-col>
+			<div class="star-left">
+				Category
+				<div class="star-sm" float-right>A</div>
+				<div class="rating-line rating-line-ten"></div>
+				<!-- <ion-icon ios="ios-star" md="md-star"></ion-icon>
+				<ion-icon ios="ios-star" md="md-star"></ion-icon>
+				<ion-icon ios="ios-star" md="md-star"></ion-icon>
+				<ion-icon ios="ios-star" md="md-star"></ion-icon>
+				<ion-icon ios="ios-star" md="md-star"></ion-icon> -->
+			</div>
+			
+			<div class="star-left">
+				Category
+				<div class="star-sm" float-right>B</div>
+				<div class="rating-line rating-line-six"></div>
+				<!-- <ion-icon ios="ios-star" md="md-star"></ion-icon>
+				<ion-icon ios="ios-star" md="md-star"></ion-icon>
+				<ion-icon ios="ios-star" md="md-star"></ion-icon>
+				<ion-icon ios="ios-star" md="md-star"></ion-icon> -->
+			</div>
+			<div class="star-left">
+				Category
+				<div class="star-sm" float-right>C</div>
+				<div class="rating-line rating-line-eight"></div>
+				<!-- <ion-icon ios="ios-star" md="md-star"></ion-icon>
+				<ion-icon ios="ios-star" md="md-star"></ion-icon>
+				<ion-icon ios="ios-star" md="md-star"></ion-icon> -->
+			</div>
+			<div class="star-left">
+				Category
+				<div class="star-sm" float-right>D</div>
+				<div class="rating-line rating-line-five"></div>
+				<!-- <ion-icon ios="ios-star" md="md-star"></ion-icon>
+				<ion-icon ios="ios-star" md="md-star"></ion-icon> -->
+			</div>
+			<div class="star-left">
+				Category
+				<div class="star-sm" float-right>F</div>
+				<div class="rating-line rating-line-one"></div>
+
+				<!-- <ion-icon ios="ios-star" md="md-star"></ion-icon> -->
+			</div>
+		</ion-col>
+
+	</ion-row>
+	<ion-list>
+		<ion-item>
+			<h2>Reviews</h2>
+			<!-- <button ion-button clear item-end (tap)="writeReviewPage()">Write a review &nbsp;
+				<ion-icon name="arrow-forward"></ion-icon>
+			</button> -->
+		</ion-item>
+	</ion-list>
+	<ion-card>
+		<ion-item>
+			<div item-start>Nice Review</div>
+			<div item-end>
+				A
+				<!-- <ion-icon ios="ios-star" md="md-star"></ion-icon>
+				<ion-icon ios="ios-star" md="md-star"></ion-icon>
+				<ion-icon ios="ios-star" md="md-star"></ion-icon>
+				<ion-icon ios="ios-star" md="md-star" class="grey"></ion-icon>
+				<ion-icon ios="ios-star" md="md-star" class="grey"></ion-icon> -->
+			</div>
+		</ion-item>
+		<ion-card-content padding-top>
+			<p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?! Whoa. This is heavy.</p>
+			<ion-row>
+				<ion-col text-left class="pl0">
+					<div>
+						Mary Doe
+					</div>
+				</ion-col>
+				<ion-col text-right>
+					<ion-note>
+						Nov 2017
+					</ion-note>
+				</ion-col>
+			</ion-row>
+		</ion-card-content>
+	</ion-card>
+	<ion-card>
+		<ion-item>
+			<div item-start>Nice Review</div>
+			<div item-end>
+				B
+				<!-- <ion-icon ios="ios-star" md="md-star"></ion-icon>
+				<ion-icon ios="ios-star" md="md-star"></ion-icon>
+				<ion-icon ios="ios-star" md="md-star"></ion-icon>
+				<ion-icon ios="ios-star" md="md-star" class="grey"></ion-icon>
+				<ion-icon ios="ios-star" md="md-star" class="grey"></ion-icon> -->
+			</div>
+		</ion-item>
+		<ion-card-content padding-top>
+			<p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?! Whoa. This is heavy.</p>
+			<ion-row>
+				<ion-col text-left class="pl0">
+					<div>
+						Mary Doe
+					</div>
+				</ion-col>
+				<ion-col text-right>
+					<ion-note>
+						Nov 2017
+					</ion-note>
+				</ion-col>
+			</ion-row>
+		</ion-card-content>
+	</ion-card>
+	<ion-card>
+		<ion-item>
+			<div item-start>Nice Review</div>
+			<div item-end>
+				C
+				<!-- <ion-icon ios="ios-star" md="md-star"></ion-icon>
+				<ion-icon ios="ios-star" md="md-star"></ion-icon>
+				<ion-icon ios="ios-star" md="md-star"></ion-icon>
+				<ion-icon ios="ios-star" md="md-star" class="grey"></ion-icon>
+				<ion-icon ios="ios-star" md="md-star" class="grey"></ion-icon> -->
+			</div>
+		</ion-item>
+		<ion-card-content padding-top>
+			<p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?! Whoa. This is heavy.</p>
+			<ion-row>
+				<ion-col text-left class="pl0">
+					<div>
+						Mary Doe
+					</div>
+				</ion-col>
+				<ion-col text-right>
+					<ion-note class="note">
+						Nov 2017
+					</ion-note>
+				</ion-col>
+			</ion-row>
+		</ion-card-content>
+	</ion-card>
+</ion-content>

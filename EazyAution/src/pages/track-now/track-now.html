@@ -1,0 +1,114 @@
+<!--
+  Generated template for the TrackNowPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    <ion-navbar>
+        <ion-title>Track Now</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content padding>
+    <ion-label text-center>
+        <h3><a href="#">Need Help?</a></h3>
+    </ion-label>
+    <ion-item-divider>
+        <ion-label class="order" padding>ORDER #  1009183794830 </ion-label>
+    </ion-item-divider>
+    <ion-label padding>Products</ion-label>
+    <ion-item class="card animated fadeIn">
+        <ion-thumbnail item-start>
+            <div class="list-tag-new" translate></div>
+            <img class="image" src="assets/avatar.png" />
+  </ion-thumbnail>
+            <div class="line-clamp">Product Name</div>
+            <div class="list-price-block">
+            </div>
+            <ion-row align-items-center>
+                <ion-col col-8>
+                    <span>
+         <h4 class="list-price-normal">
+         	 		<p>Size: M</p>
+                    <p>Quantity: 2</p>
+                    </h4>
+                    </span>
+                </ion-col>
+                 <ion-col col-3>
+                 	<span class="list-price-normal-through" item-end>$12.99</span>
+                 </ion-col>
+                <ion-col col-1>
+                    <ion-icon class="fa-rotate-90" ios="ios-more" md="md-more"></ion-icon>
+                </ion-col>
+            </ion-row>
+    </ion-item>
+   <ion-item class="card animated fadeIn">
+        <ion-thumbnail item-start>
+            <div class="list-tag-new" translate></div>
+            <img class="image" src="assets/avatar.png" />
+  </ion-thumbnail>
+            <div class="line-clamp">Product Name</div>
+            <div class="list-price-block">
+            </div>
+            <ion-row align-items-center>
+                <ion-col col-8>
+                    <span>
+         <h4 class="list-price-normal">
+         	 		<p>Size: M</p>
+                    <p>Quantity: 2</p>
+                    </h4>
+                    </span>
+                </ion-col>
+                 <ion-col col-3>
+                 	<span class="list-price-normal-through" item-end>$12.99</span>
+                 </ion-col>
+                <ion-col col-1>
+                    <ion-icon class="fa-rotate-90" ios="ios-more" md="md-more"></ion-icon>
+                </ion-col>
+            </ion-row>
+    </ion-item>
+    <ion-label padding>Delivery</ion-label>
+    <ion-card>
+        <ion-item>
+            <!-- <ion-icon name="pin" item-start large ></ion-icon> -->
+            <h2>Delivery Address</h2>
+            <p>14 S. Hop Avenue, Madison, WI 53703</p>
+            <!-- <ion-item-divider> -->
+            <!-- </ion-item-divider> -->
+            <button ion-button icon-start clear>
+                <ion-icon name="navigate"></ion-icon>
+                Delivered at 12:31 PM
+            </button>
+        </ion-item>
+        <ion-item-divider>
+        </ion-item-divider>
+        <ion-item>
+            <span item-start>Estimated Delivery : </span>
+            <span item-start> 20 Sep, 2017</span>
+        </ion-item>
+    </ion-card>
+    <ion-label padding>Tracking</ion-label>
+    <timeline endIcon="pin" padding-bottom>
+        <timeline-item *ngFor="let item of items">
+            <timeline-time time="22:10:00"></timeline-time>
+            <ion-icon [name]="item.icon"></ion-icon>
+            <ion-card>
+                <ion-card-header>
+                    {{item.title}}
+                    <ion-item-divider>
+                    </ion-item-divider>
+                </ion-card-header>
+                <ion-card-content>
+                    {{item.content}}
+                </ion-card-content>
+            </ion-card>
+        </timeline-item>
+    </timeline>
+</ion-content>
+<ion-footer padding>
+    <ion-item>
+        <!-- <ion-icon name="football" item-start large></ion-icon> -->
+        <h2>Sent Address</h2>
+        <p>11 N. Way St, Madison, WI 53703</p>
+    </ion-item>
+</ion-footer>

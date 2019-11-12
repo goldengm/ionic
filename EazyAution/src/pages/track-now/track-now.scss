@@ -1,0 +1,47 @@
+page-track-now {
+
+    .item,
+    .item-md {
+        background: #ffffff !important;
+    }
+
+    .card-md,
+    .card {
+        background: #ffffff !important;
+
+    }
+
+
+    .timeline .card {
+        //  width: 34rem !important;
+    }
+
+    ion-label {
+        font-weight: 500;
+        font-size: 1.6rem;
+    }
+
+    .item .item-button {
+        height: 51px;
+        /* font-size: 1.2rem; */
+        /* margin-left: -1rem; */
+        margin-top: 5%;
+        margin-bottom: -1rem;
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .card-header {
+        font-size: 1.6rem;
+        color: #000;
+        font-weight: 500;
+    }
+    .order{
+    font-weight: 500;
+    color: #000000;
+    }
+}

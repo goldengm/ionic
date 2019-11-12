@@ -1,0 +1,58 @@
+add-flaw {
+    background: rgba(0, 0, 0, 0.7);
+    display: flex !important;
+    align-items: center;
+    flex-direction: row;
+
+    .container {
+        background: white;
+        margin: 20px;
+        border-radius: 10px;
+        width: 100%;
+        overflow: hidden;
+        .label {
+            color: black;
+        }
+        & > .header > p {
+            margin: 0px;
+            padding: 10px;
+            background: lightgray;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        & > .footer {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            margin: 10px;
+        }
+
+        & > .item-select {
+            margin: 10px 10px 0px;
+            width: calc(100% - 20px);
+        }
+
+        & > .item-row {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            margin: 0px 10px;
+            font-size: 1.2em;
+            background-color: #F2F2F2;
+            & > p {
+                margin: 0;
+                color: black;
+            }
+
+            & > input {
+                background: transparent;
+                border: none;
+                width: 100%;
+                margin-left: 10px;
+            }
+        }
+    }
+}

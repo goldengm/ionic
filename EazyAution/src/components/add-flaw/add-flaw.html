@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="header">
+    <p>Add Flaw</p>
+  </div>
+  <ion-item no-lines>
+    <ion-label>Flaw type</ion-label>
+    <ion-select [(ngModel)]="type">
+      <ion-option value="mark">Mark</ion-option>
+      <ion-option value="hole">Hole</ion-option>
+    </ion-select>
+  </ion-item>
+  <div class="item-row">
+    <p>Position</p>
+    <input type="text" [(ngModel)]="position"/>
+  </div>
+  <div class="footer">
+    <button ion-button color="primary" (click)="saveFlaw()">Save</button>
+    <button ion-button color="secondary" (click)="closeModal()">Close</button>
+  </div>
+</div>

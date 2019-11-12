@@ -1,0 +1,59 @@
+page-add-review {
+	h2 {
+		line-height: 2.2;
+		padding: 20px;
+		color: grey;
+	}
+	.star-xlg {
+		font-size: 4rem;
+		//padding: 8%;
+		text-align: center;
+	}
+
+	.card-ios {
+		margin: 12px;
+		border-radius: 2px;
+		width: calc(100% - 24px);
+		font-size: 1.4rem;
+		background: #fff;
+		-webkit-box-shadow: 0 0px 0px rgba(0, 0, 0, 0);
+		box-shadow: 0 0px 0px rgba(0, 0, 0, 0);
+		text-align: center;
+	}
+	ion-item.item.item-block.item-ios {
+    background-color: #f7f7f7;
+	}
+	ion-textarea,
+	textarea {
+		height: 250px;
+		border: 1px solid #f3f3f3;
+		background-color: #ffffff;
+	}
+	ion-icon.icon.icon-ios.ion-ios-star {
+		color: orange;
+	}
+	ion-icon.icon.icon-ios.ion-ios-star.grey {
+		color: #cecece;
+	}
+	.bg-white{
+	background-color: #ffffff !important;
+	}
+	.card{
+	    background: #ffffffad;
+	  //  padding-top: 25px;
+	}
+	.button.button-md .button-inner, .bar-button.bar-button-md .button-inner {
+    height: 100%;
+}
+button.button.button-md.button-clear.button-clear-md {
+    margin-top: 0%;
+}
+.item-md, .item {
+
+    background-color: transparent;
+   
+}
+.rating .button-inner{
+	 font-size: 18px;
+}
+}
