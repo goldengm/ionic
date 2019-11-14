@@ -134,6 +134,10 @@ import { TimelineComponent } from '../components/timeline/timeline';
 import { TimelineTimeComponent } from '../components/timeline/timeline';
 import { TimelineItemComponent } from '../components/timeline/timeline';
 import { ReturnsPage } from '../pages/returns/returns';
+import { EazyReturnsPage } from '../pages/eazyreturns/eazyreturns';
+import { SellerReturnsPage } from '../pages/seller-returns/seller-returns';
+import { OfferRefundPage } from '../pages/offer-refund/offer-refund';
+import { ItemDetailsPage } from '../pages/item-details/item-details';
 
 @NgModule({
   declarations: [
@@ -217,7 +221,11 @@ import { ReturnsPage } from '../pages/returns/returns';
     TimelineComponent,
     TimelineItemComponent,
     TimelineTimeComponent,
-    ReturnsPage
+    ReturnsPage,
+    EazyReturnsPage,
+    SellerReturnsPage,
+    OfferRefundPage,
+    ItemDetailsPage
   ],
   imports: [
     IonicModule.forRoot(MyApp,{
@@ -319,7 +327,11 @@ import { ReturnsPage } from '../pages/returns/returns';
     AddReviewPage,
     BoxedProtectionPage,
     TrackNowPage,
-    ReturnsPage
+    ReturnsPage,
+    EazyReturnsPage,
+    SellerReturnsPage,
+    OfferRefundPage,
+    ItemDetailsPage
   ],
   providers: [
     HTTP,

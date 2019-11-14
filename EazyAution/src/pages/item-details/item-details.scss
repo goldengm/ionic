@@ -1,0 +1,65 @@
+page-item-details {
+  .bold {
+    font-weight: bold;
+  }
+  .strike {
+    text-decoration: line-through;
+  }
+  .mr-20 {
+    margin-right: 20px;
+  }
+  .mr-30 {
+    margin-right: 30px;
+  }
+  .star-left {
+    text-align: left;
+  }
+
+  .star-sm ion-icon.icon.icon-ios.ion-ios-star {
+    font-size: 9px;
+    color: #b0b0b0;
+  }
+  .rating-line {
+    border: 4px solid #c3c3c37d;
+    margin: 1rem 0px 1.5rem 0;
+  }
+  .rating-line-one {
+    border-left: 0rem solid orange !important;
+  }
+
+  .rating-line-two {
+      border-left: 1rem solid orange !important;
+  }
+
+  .rating-line-three {
+      border-left: 2rem solid orange !important;
+  }
+
+  .rating-line-four {
+      border-left: 4rem solid orange !important;
+  }
+
+  .rating-line-five {
+      border-left: 6rem solid orange !important;
+  }
+
+  .rating-line-six {
+      border-left: 8rem solid orange !important;
+  }
+
+  .rating-line-seven {
+      border-left: 10rem solid orange !important;
+  }
+
+  .rating-line-eight {
+      border-left: 12rem solid orange !important;
+  }
+
+  .rating-line-nine {
+      border-left: 14rem solid orange !important;
+  }
+
+  .rating-line-ten {
+      border-left: 16rem solid orange !important;
+  }
+}
