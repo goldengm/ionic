@@ -343,6 +343,41 @@ export class SharedDataProvider {
     });
   }
 
+  getFollowers(customerId) {
+    return this.httpClient.get(this.config.url + 'get_followers/' + customerId)
+  }
+
+  getFollowing(customerId) {
+    return this.httpClient.get(this.config.url + 'get_followings/' + customerId)
+  }
+
+  followingUser(data) {
+    return this.httpClient.post(this.config.url + 'following_user', data)
+  }
+
+  unFollowUser(data) {
+    return this.httpClient.post(this.config.url + 'unfollow_user', data)
+  }
+
+  get_review(customerId) {
+    return this.httpClient.get(this.config.url + 'get_review/' + customerId)
+  }
+
+  get_review_list(customerId) {
+    return this.httpClient.get(this.config.url + 'get_review_list/' + customerId)
+  }
+
+  get_review_categories() {
+    return this.httpClient.get(this.config.url + 'get_review_categories')
+  }
+
+  deleteReview(reviewId) {
+    return this.httpClient.get(this.config.url + 'delete_review', reviewId)
+  }
+
+  addReview(data) {
+    return this.httpClient.post(this.config.url + 'add_review', data)
+  }
 
   login(data) {
     this.customerData = data;

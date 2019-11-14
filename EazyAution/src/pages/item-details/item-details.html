@@ -1,0 +1,118 @@
+<!--
+  Generated template for the SellerReturnsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{'Item Details'| translate }}</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only>
+        <ion-icon name="download"></ion-icon>
+      </button>
+      <button ion-button icon-only>
+        <ion-icon name="heart"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-avatar item-start>
+          <img src="https://i.pravatar.cc/300">
+      </ion-avatar>
+      <h2 style="font-weight: bold; font-size: 20px;">Jonathan Daniel</h2>
+      <h6>Atlanta, Georgia</h6>
+      <button ion-button clear item-end>Grade B</button>
+    </ion-item>
+    <ion-item>
+      <ion-icon>
+        <img class="image" src="assets/avatar.png" />
+      </ion-icon>
+    </ion-item>
+    <ion-item>
+      <ion-row>
+        <ion-col col-6>
+          <h1 style="font-weight: bold;">Item Name</h1>
+        </ion-col>
+        <ion-col col-6 style="text-align: right;">
+          <h1 style="font-weight: bold;">$75</h1>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-12>
+          <p>Occupying floors 51-59, this spacious suite enjoys beautiful views of Bangkok City and Chao Phraya River. It includes an LCD TV.</p>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-3>
+          <h2 style="font-weight: bold;">Condition</h2>
+          <p>Used</p>
+          <h2 style="font-weight: bold;">Flaws</h2>
+          <p>Scratch</p>
+        </ion-col>
+        <ion-col>
+          <ion-row>
+            <div class="star-left">
+              A
+              <div class="star-sm" float-right>21</div>
+              <div class="rating-line rating-line-six"></div>
+            </div>
+          </ion-row>
+          <ion-row>
+            <div class="star-left">
+              B
+              <div class="star-sm" float-right>14</div>
+              <div class="rating-line rating-line-ten"></div>
+            </div>
+          </ion-row>
+          <ion-row>
+            <div class="star-left">
+              C
+              <div class="star-sm" float-right>3</div>
+              <div class="rating-line rating-line-eight"></div>
+            </div>
+          </ion-row>
+          <ion-row>
+            <div class="star-left">
+              D
+              <div class="star-sm" float-right>1</div>
+              <div class="rating-line rating-line-two"></div>
+            </div>
+          </ion-row>
+        </ion-col>
+      </ion-row>
+    </ion-item>
+    <ion-item>
+      <h2>{{"Additional Details"|translate}}</h2>
+    </ion-item>
+    <ion-item>
+      <h2>{{"Flag Item"|translate}}</h2>
+    </ion-item>
+  </ion-list>
+  <!-- <div class="module" *ngIf="shared.flashSaleProducts.length!=0" [@animate]>
+    <ion-slides slidesPerView=2.2 spaceBetween=10 dir="{{shared.dir}}" autoResize='true'>
+      <ion-slide *ngFor="let p of shared.flashSaleProducts" [@animate]>
+        <product [data]="p" [type]="'flash'"></product>
+      </ion-slide>
+    </ion-slides>
+  </div> -->
+<ion-list>  
+  <ion-item>
+    <ion-row>        
+      <ion-col col-4>
+        <button ion-button block>{{ 'Message' | translate }}</button>
+      </ion-col>
+      <ion-col col-4>
+        <button ion-button block>{{ 'Offer' | translate }}</button>
+      </ion-col>
+      <ion-col col-4>
+        <button ion-button block>{{ 'Buy It' | translate }}</button>
+      </ion-col>
+    </ion-row>
+  </ion-item>
+</ion-list>
+</ion-content>

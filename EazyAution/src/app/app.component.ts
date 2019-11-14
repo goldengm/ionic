@@ -63,6 +63,10 @@ import { ReturnsPage } from '../pages/returns/returns';
 import { AddReviewPage } from '../pages/add-review/add-review';
 import { BoxedProtectionPage } from '../pages/boxed-protection/boxed-protection';
 import { TrackNowPage } from '../pages/track-now/track-now';
+import { EazyReturnsPage } from '../pages/eazyreturns/eazyreturns';
+import { SellerReturnsPage } from '../pages/seller-returns/seller-returns';
+import { OfferRefundPage } from '../pages/offer-refund/offer-refund';
+import { ItemDetailsPage } from '../pages/item-details/item-details';
 
 @Component({
   animations: [
@@ -301,6 +305,10 @@ export class MyApp {
     else if (page == 'boxedprotection') this.nav.push(BoxedProtectionPage);
     else if (page == 'tracknow') this.nav.push(TrackNowPage);
     else if (page == 'returns') this.nav.push(ReturnsPage);
+    else if (page == 'eazyreturns') this.nav.push(EazyReturnsPage);
+    else if (page == 'sellerreturns') this.nav.push(SellerReturnsPage);
+    else if (page == 'offerrefund') this.nav.push(OfferRefundPage);
+    else if (page == 'itemdetails') this.nav.push(ItemDetailsPage);
   }
   openHomePage() {
     if (this.config.homePage == 1) { this.nav.setRoot(HomePage); }

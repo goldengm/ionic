@@ -1,0 +1,105 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Eazy Returns</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="page-settings">
+  <ion-row class="grid-t">
+    <ion-col>
+      <div class="logo">
+        <img class="image" src="assets/icons_stripe.svg" />
+      </div>
+    </ion-col>
+  </ion-row>
+  <ion-list>
+    <ion-row padding>
+      <ion-col col-9 >
+        <h2 class="bold">The Colony Grill Room</h2>
+        <p>$199.95</p>
+      </ion-col>
+      <ion-col col-3 class="align-right">
+        <p class="rate"><span class="ml5"><ion-icon name="star"></ion-icon></span>&nbsp;&nbsp;4.9</p>
+      </ion-col>
+    </ion-row> 
+  </ion-list>
+  <ion-list radio-group>
+    <ion-item padding>
+      <h2>{{"Date Added"|translate}}</h2>
+    </ion-item>
+    <ion-item>
+      <h2>{{"Date Paid"|translate}}</h2>
+    </ion-item>
+    <ion-item>
+      <h2>{{"Date Delivered"|translate}}</h2>
+    </ion-item>
+    <ion-item>
+      <p style="height: 35px;"></p>
+      <p style="font-size:12px">REASON FOR RETURN</p>
+    </ion-item>
+    <ion-item>
+      <ion-label>Doesn't Fit.</ion-label>
+      <ion-radio value="value1" checked></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>No longer Needed</ion-label>
+      <ion-radio value="value2"></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>Found it elsewhere</ion-label>
+      <ion-radio value="value3"></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>Ordered by mistake</ion-label>
+      <ion-radio value="value4" [disabled]="isDisabled"></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>Not as listed</ion-label>
+      <ion-radio value="value5" [disabled]="isDisabled"></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>Arrived Damaged</ion-label>
+      <ion-radio value="value6" [disabled]="isDisabled"></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>Doesn't seems authentic</ion-label>
+      <ion-radio value="value7" [disabled]="isDisabled"></ion-radio>
+    </ion-item>
+      
+    <ion-item>
+      <p style="height: 50px;"></p>
+      <p style="font-size:12px">REASON FOR RETURN</p>
+    </ion-item>
+    <ion-item style="text-align: center;">
+      <textarea placeholder="120 char" style="width: 98%; height: 100px;">
+
+      </textarea>
+      <p style="height: 15px;"></p>
+      <p style="font-size:12px; text-align: left;">ADD PHOTOS</p>
+    </ion-item>
+    <ion-item>
+      <ion-row style="text-align: center;">
+        <ion-col col-12>
+          <img style="width:40%" class="image" src="assets/avatar.png" /> 
+        </ion-col>
+      </ion-row>
+      <ion-row style="text-align: center;">
+        <ion-col col-12>
+          <button ion-button small outline>
+            <ion-icon name="remove"></ion-icon>
+          </button>
+          <span class="dgi">0</span>
+          <button ion-button small outline>
+            <ion-icon name="add"></ion-icon>
+          </button>
+        </ion-col>
+      </ion-row>
+      <ion-row>        
+        <ion-col col-12>
+          <button ion-button block>{{ 'Confirm Return' | translate }}</button>
+        </ion-col>
+      </ion-row>
+    </ion-item>
+  </ion-list>
+  
+</ion-content>

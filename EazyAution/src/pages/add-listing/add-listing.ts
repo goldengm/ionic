@@ -158,13 +158,20 @@ export class AddListingPage {
         {
           text: 'Save',
           handler: () => {
+            console.log('New Listing Save Clicked');
             console.log(this.listing);
+            this.httpClient.post(this.config.url + 'postlisting', this.listing).subscribe((data:any) => {
+              console.log('Sent new listing request.');
+            });
             this.navCtrl.pop();
           }
         }
       ]
     });
     alert.present();
+  }
+  onPost() {    
+    //this.navCtrl.pop();
   }
 
 }

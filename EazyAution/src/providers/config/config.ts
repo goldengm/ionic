@@ -20,20 +20,20 @@ import 'rxjs/add/operator/map';
 export class ConfigProvider {
 
   // prod urls
-   public yourSiteUrl: string = 'http://ec2-18-221-228-218.us-east-2.compute.amazonaws.com';
-   public socketUrl: string = 'http://ec2-18-221-228-218.us-east-2.compute.amazonaws.com:6000';
+  // public yourSiteUrl: string = 'http://ec2-18-221-228-218.us-east-2.compute.amazonaws.com';
+  // public socketUrl: string = 'http://ec2-18-221-228-218.us-east-2.compute.amazonaws.com:6000';
 
   // dev urls
-  // public yourSiteUrl: string = 'http://commerce.net';
-  // public socketUrl: string = 'http://localhost:6001'
+   public yourSiteUrl: string = 'http://127.0.0.1/eazy';
+   public socketUrl: string = 'http://127.0.0.1:6001'
   
   // prod keys
-  public consumerKey: string = "83f7c1f615702152710c566362";
-  public consumerSecret: string = "4bc4da2c1570215271eb63a6d7";
+  //public consumerKey: string = "83f7c1f615702152710c566362";
+  //public consumerSecret: string = "4bc4da2c1570215271eb63a6d7";
 
   // dev keys
-   //public consumerKey: string = "c57755ff1570222012c40b814b";
-   //public consumerSecret: string = "ecc5f1da1570222012880215d5";
+    public consumerKey: string = "6df56cf915318431043dd7a75d";
+    public consumerSecret: string = "95032b42153184310488f5fb8f";
 
   public showIntroPage = 1; //  0 to hide and 1 to show intro page
   public appInProduction = true; //  0 to hide and 1 to show intro page
@@ -62,7 +62,7 @@ export class ConfigProvider {
   public footerShowHide;
   public homePage = 1;
   public categoryPage = 2;
-  public siteUrl = 'http://ec2-18-221-228-218.us-east-2.compute.amazonaws.com';
+  public siteUrl = 'http://localhost';
   public appName = 'EazyAuctions';
   public packgeName = "com.honestapp.ionicecommerce";
   public introPage = 1;

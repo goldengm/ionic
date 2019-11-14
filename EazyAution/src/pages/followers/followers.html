@@ -1,33 +1,30 @@
 <ion-header>
-    
-      <ion-navbar>
-        <button ion-button icon-only menuToggle>
-          <ion-icon name="menu"></ion-icon>
-        </button>
-    
-        <ion-title>
-          {{'Followers'| translate }}
-        </ion-title>
-    
-        <ion-buttons end>
-          <button ion-button icon-only (click)="openSearch()">
-            <ion-icon name="search"></ion-icon>
-          </button>
-          <button ion-button icon-only class="cart-button" (click)="openCart()">
-            <ion-icon name="cart">
-              <ion-badge color="secondary">{{shared.cartquantity}}</ion-badge>
-            </ion-icon>
-          </button>
-        </ion-buttons>
-      </ion-navbar>
-    
-    </ion-header>
+  <ion-navbar>
+    <button ion-button icon-only menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
 
+    <ion-title>
+      {{'Followers'| translate }}
+    </ion-title>
+
+    <ion-buttons end>
+      <button ion-button icon-only (click)="openSearch()">
+        <ion-icon name="search"></ion-icon>
+      </button>
+      <button ion-button icon-only class="cart-button" (click)="openCart()">
+        <ion-icon name="cart">
+          <ion-badge color="secondary">{{shared.cartquantity}}</ion-badge>
+        </ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
 
 <ion-content padding>
-	 <form #loginForm="ngForm" (ngSubmit)="getSearchData()">
-    <ion-searchbar [(ngModel)]="search" name="search" placeholder="{{'Search'|translate}}" [showCancelButton]="shouldShowCancel"
-      (ionInput)="onChangeKeyword($event)">
+  <form #loginForm="ngForm" (ngSubmit)="getSearchData()">
+    <ion-searchbar [(ngModel)]="search" name="search" placeholder="{{'Search'|translate}}"
+      [showCancelButton]="shouldShowCancel" (ionInput)="onChangeKeyword($event)">
     </ion-searchbar>
   </form>
   <ion-list no-lines>
@@ -69,7 +66,6 @@
       </ion-avatar>
       <h2>John Doe</h2>
       <p> @john.doe </p>
-
       <button ion-button clear item-end>
         <span class="number-circle">C</span>
       </button>

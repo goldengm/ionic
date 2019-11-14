@@ -1,0 +1,63 @@
+page-eazyreturns {
+  .page-settings {
+    .item {
+      background-color: $white;
+    }
+  }
+  .grid-t {
+    .logo {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 10px;
+      overflow: hidden;
+      border-width: 2px;
+      border-style: solid;
+      border-color:color($colors, light); 
+      .image {
+        display: block;
+        opacity: 0.10;
+      }
+    }
+  }
+
+  .grid-b{
+    .col{
+      .button{
+        margin-left: 0;
+        margin-right: 0;
+        .icon{
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+  .red{
+    color: red;
+  }
+  .align-right {
+    text-align: right;
+  }
+  .rate {
+    font-weight: bold;
+    background-color: white;
+    width: 50px;
+    display: flex;
+    float: right;
+  }
+  .mr20 {
+    margin-right: 10px;
+  }
+  .ml5 {
+    margin-left: 5px;
+  }
+  .dgi {
+    display: inline-block;
+    position: relative;
+    top: 5px;
+    width: 35px;
+    text-align: center;
+  }
+}
